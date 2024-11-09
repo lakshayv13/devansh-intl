@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these styles in your global CSS file or in a module */
+@keyframes cryptography-in {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cryptography-out {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.animate-in {
+    animation: cryptography-in 0.5s ease-in-out forwards;
+}
+
+.animate-out {
+    animation: cryptography-out 0.5s ease-in-out forwards;
+}
+
+.custom-transition {
+    transition: transform 700ms, border 700ms, background-color 0ms;
+}
