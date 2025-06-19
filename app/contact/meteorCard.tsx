@@ -1,6 +1,6 @@
 import React from "react";
 import { Meteors } from "@/components/ui/meteors";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -44,7 +44,7 @@ export function MeteorCard(props: Props) {
           </h1>
 
           <p className="flex gap-x-2 items-center font-normal text-base text-slate-500 mb-4 relative z-40">
-            <FaPhoneAlt />
+            <FiPhone />
             {props.number}
           </p>
 
