@@ -8,14 +8,14 @@ import { siteConfig } from "@/config/site";
 export function ReviewSection() {
   return (
     <div className="mt-[8rem]">
-    <h1 className={title()}>Customer Reviews</h1>
-    <div className="h-[20rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
-        items={siteConfig.reviews}
-        direction="right"
-        speed="slow"
-      />
-    </div>
+      <h2 className={title()}>Customer Reviews</h2>
+      <div className="h-[20rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <InfiniteMovingCards
+          items={siteConfig.reviews}
+          direction="right"
+          speed="slow"
+        />
+      </div>
     </div>
   );
 }

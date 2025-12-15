@@ -67,45 +67,16 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: siteConfig.name,
-  image: `${siteConfig.url}/logo.png`,
-  "@id": siteConfig.url,
-  url: siteConfig.url,
-  telephone: "+91-7011284949",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress:
-      "B-129, Flat, No. 9, Deoli Rd, Pocket A, Duggal Colony, Khanpur",
-    addressLocality: "New Delhi",
-    postalCode: "110062",
-    addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 28.516805,
-    longitude: 77.230722,
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    opens: "09:00",
-    closes: "18:00",
-  },
-  sameAs: [
-    "https://www.facebook.com/devanshinternational/",
-    "https://instagram.com/devanshinternational",
-  ],
-};
+import {
+  generateWebsiteSchema,
+  generateOrganizationSchema,
+} from "@/lib/seo/schema";
+
+// Website schema for sitelinks search box and site structure
+const websiteSchema = generateWebsiteSchema();
+
+// Enhanced Organization schema with multiple locations
+const organizationSchema = generateOrganizationSchema();
 
 export const viewport: Viewport = {
   themeColor: [
@@ -130,9 +101,19 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
+            {/* Website Schema for sitelinks search box */}
             <script
               type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(websiteSchema),
+              }}
+            />
+            {/* Organization Schema for knowledge graph */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(organizationSchema),
+              }}
             />
             <ToastContainer
               position="top-right"
