@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default:
-      "Devansh International | Apostille, Attestation & Visa Services India",
+      "Document Attestation in Delhi, Mumbai, Bangalore | Devansh International",
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Fast & reliable Apostille, Embassy Attestation, MEA services & Visa assistance in Delhi & Visakhapatnam. Government-approved document legalization.",
+    "Professional document attestation & apostille services in Delhi, Mumbai, Bangalore, Visakhapatnam. Fast MEA attestation, embassy legalization across India.",
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
   creator: siteConfig.creator,

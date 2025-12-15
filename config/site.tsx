@@ -8,6 +8,7 @@ export const siteConfig = {
     "Your trusted partner for Apostille, Embassy Attestation, Translation, and Visa services. Fast, reliable, and government-approved document legalization services in India.",
   url: "https://devanshinternational.com",
   keywords: [
+    // Service keywords
     "Apostille",
     "Embassy Attestation",
     "MEA Attestation",
@@ -18,10 +19,25 @@ export const siteConfig = {
     "Birth Certificate Apostille",
     "Marriage Certificate Attestation",
     "PCC Attestation",
+    // Location keywords - Delhi
+    "Document Attestation in Delhi",
+    "Apostille Services Delhi",
+    "MEA Attestation Delhi",
+    "Embassy Attestation Delhi NCR",
+    // Location keywords - Mumbai
+    "Document Attestation in Mumbai",
+    "Apostille Services Mumbai",
+    "MEA Attestation Mumbai",
+    // Location keywords - Bangalore
+    "Document Attestation in Bangalore",
+    "Apostille Services Bangalore",
+    "MEA Attestation Bangalore",
+    // Brand
     "Devansh International",
     "DIDC",
-    "Visa Consultants Delhi",
+    // Other cities
     "Attestation Services Visakhapatnam",
+    "Attestation Services Kolkata",
   ],
   authors: [
     {
