@@ -4,7 +4,32 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Devansh International",
-  description: "Make beautiful websites regardless of your design experience.",
+  description:
+    "Your trusted partner for Apostille, Embassy Attestation, Translation, and Visa services. Fast, reliable, and government-approved document legalization services in India.",
+  url: "https://devanshinternational.com",
+  keywords: [
+    "Apostille",
+    "Embassy Attestation",
+    "MEA Attestation",
+    "Visa Services",
+    "Translation Services",
+    "Document Legalization",
+    "Degree Attestation",
+    "Birth Certificate Apostille",
+    "Marriage Certificate Attestation",
+    "PCC Attestation",
+    "Devansh International",
+    "DIDC",
+    "Visa Consultants Delhi",
+    "Attestation Services Visakhapatnam",
+  ],
+  authors: [
+    {
+      name: "Devansh International",
+      url: "https://devanshinternational.com",
+    },
+  ],
+  creator: "Devansh International",
   serviceDocument: [
     {
       name: "Birth Certificates",

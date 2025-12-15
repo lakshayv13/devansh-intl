@@ -56,9 +56,27 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="-mt-20">
-      <h1 className={clsx(title(), "hidden lg:block")}>Our Offices</h1>
-      <div className="hidden lg:flex justify-around gap-x-0 xl:gap-x-5 -mt-14">
+    <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="text-center mb-16">
+        <h1
+          className={clsx(
+            title(),
+            "text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight"
+          )}
+        >
+          Our <span className="text-violet-500">Offices</span>
+        </h1>
+        <p
+          className={clsx(
+            subtitle(),
+            "mt-4 max-w-2xl mx-auto text-slate-500 dark:text-slate-400 text-lg"
+          )}
+        >
+          Visit our strategic locations to discuss how we can assist in your
+          global document attestation needs.
+        </p>
+      </div>
+      <div className="hidden lg:flex justify-center flex-wrap gap-8 mb-20">
         {siteConfig.addresses.map((item, idx) => {
           return (
             <PinCard
@@ -87,16 +105,19 @@ export default function ContactPage() {
           );
         })}
       </div>
-      <div className="flex w-full items-center justify-between -mt-5">
-        <div className="w-full">
-          <h1 className={title()}>Get in&nbsp;</h1>
-          <h1 className={title({ color: "violet" })}>Touch</h1>
-          <h1 className={title()}>.</h1>
-          <h1 className={clsx(subtitle(), "text-md lg:text-lg text-slate-400")}>
-            Fill out the from below and we&apos;ll get back to you as soon as.
-          </h1>
+      <div className="flex flex-col lg:flex-row w-full items-start justify-between mt-24 gap-12">
+        <div className="w-full lg:w-1/2">
+          <div className="mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              Get in <span className="text-violet-500">Touch</span>
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+              Fill out the form below and our team will get back to you within
+              24 hours.
+            </p>
+          </div>
           <form
-            className="grid gap-y-5 mt-5 w-full"
+            className="grid gap-y-6 w-full bg-white dark:bg-zinc-900/50 p-8 rounded-3xl border border-slate-100 dark:border-zinc-800 shadow-sm"
             onSubmit={(e) => {
               handleSubmit(e);
             }}
@@ -111,6 +132,11 @@ export default function ContactPage() {
                   setFName(e.target.value);
                 }}
                 required
+                variant="bordered"
+                classNames={{
+                  inputWrapper:
+                    "bg-transparent border-slate-200 dark:border-zinc-700 hover:border-violet-500 focus-within:!border-violet-500",
+                }}
               />
               <Input
                 size="md"
@@ -121,6 +147,11 @@ export default function ContactPage() {
                   setLName(e.target.value);
                 }}
                 required
+                variant="bordered"
+                classNames={{
+                  inputWrapper:
+                    "bg-transparent border-slate-200 dark:border-zinc-700 hover:border-violet-500 focus-within:!border-violet-500",
+                }}
               />
             </div>
             <div className="flex flex-wrap sm:flex-nowrap gap-4">
@@ -133,6 +164,11 @@ export default function ContactPage() {
                   setEmail(e.target.value);
                 }}
                 required
+                variant="bordered"
+                classNames={{
+                  inputWrapper:
+                    "bg-transparent border-slate-200 dark:border-zinc-700 hover:border-violet-500 focus-within:!border-violet-500",
+                }}
               />
               <Input
                 size="md"
@@ -143,6 +179,11 @@ export default function ContactPage() {
                   setMobile(e.target.value);
                 }}
                 required
+                variant="bordered"
+                classNames={{
+                  inputWrapper:
+                    "bg-transparent border-slate-200 dark:border-zinc-700 hover:border-violet-500 focus-within:!border-violet-500",
+                }}
               />
             </div>
             <div className="flex flex-wrap md:flex-nowrap gap-4">
@@ -155,6 +196,11 @@ export default function ContactPage() {
                   setSubject(e.target.value);
                 }}
                 required
+                variant="bordered"
+                classNames={{
+                  inputWrapper:
+                    "bg-transparent border-slate-200 dark:border-zinc-700 hover:border-violet-500 focus-within:!border-violet-500",
+                }}
               />
             </div>
             <Textarea
@@ -166,9 +212,20 @@ export default function ContactPage() {
                 setMessage(e.target.value);
               }}
               required
+              variant="bordered"
+              minRows={6}
+              classNames={{
+                inputWrapper:
+                  "bg-transparent border-slate-200 dark:border-zinc-700 hover:border-violet-500 focus-within:!border-violet-500",
+              }}
             />
-            <Button type="submit" color="secondary" className="h-[50px]">
-              Submit
+            <Button
+              type="submit"
+              color="secondary"
+              size="lg"
+              className="w-full font-bold shadow-lg shadow-violet-500/20"
+            >
+              Send Message
             </Button>
           </form>
         </div>
@@ -177,7 +234,7 @@ export default function ContactPage() {
           alt="didc"
           width={600}
           height={600}
-          className="hidden lg:inline"
+          className="hidden lg:block object-contain"
         />
       </div>
     </div>

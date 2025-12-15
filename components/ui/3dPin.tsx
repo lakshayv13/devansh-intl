@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
-import { FaLocationDot } from "react-icons/fa6";
+import { MapPin } from "lucide-react";
 
 export const PinContainer = ({
   children,
@@ -86,7 +86,7 @@ export const PinPerspective = ({
             className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10"
           >
             <span className="flex items-center gap-x-2 relative z-20 text-white text-xs font-bold inline-block py-0.5">
-              <FaLocationDot />
+              <MapPin className="w-4 h-4" />
               {title}
             </span>
 

@@ -1,13 +1,38 @@
-export default function DocsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: "Frequently Asked Questions",
+  description:
+    "Find answers to common questions about Apostille, Embassy Attestation, Visa services, and document legalization procedures.",
+  openGraph: {
+    title: "Frequently Asked Questions | Devansh International",
+    description:
+      "Expert answers to your queries regarding document attestation and visa services.",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: siteConfig.faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+export default function FAQLayout({ children }: { children: React.ReactNode }) {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-0 mt-0">
-      <div className="inline-block w-full text-center justify-center">
-        {children}
-      </div>
-    </section>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {children}
+    </>
   );
 }
