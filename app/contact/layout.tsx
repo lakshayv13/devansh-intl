@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Contact Us | Offices in Delhi & Visakhapatnam",
   description:
-    "Get in touch with Devansh International for all your document attestation needs. Visit our offices in New Delhi or Visakhapatnam, or contact us online.",
+    "Contact Devansh International for document attestation. Visit our Delhi or Visakhapatnam offices or reach us online.",
   keywords: [
     "Contact DIDC",
     "Attestation Agency Delhi",

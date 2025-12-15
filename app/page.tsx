@@ -33,10 +33,9 @@ export default function Home() {
         <div className="flex flex-col items-center lg:items-start justify-center gap-4 py-0 lg:py-[8rem]">
           <div className="inline-block max-w-full lg:max-w-lg text-left text-center lg:text-start justify-center">
             <h1 className={title()}>
-              Get your documents verfied with our top of the line&nbsp;
+              Get your documents verfied with our top of the line{" "}
+              <span className={title({ color: "violet" })}>services</span>.
             </h1>
-            <h1 className={title({ color: "violet" })}>services</h1>
-            <h1 className={title()}>.</h1>
             <br />
             <h2 className={subtitle({ class: "mt-4" })}>
               We specialize in providing efficient and reliable document

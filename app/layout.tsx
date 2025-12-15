@@ -14,10 +14,12 @@ import Footer from "@/components/ui/footer";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default:
+      "Devansh International | Apostille, Attestation & Visa Services India",
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description:
+    "Fast & reliable Apostille, Embassy Attestation, MEA services & Visa assistance in Delhi & Visakhapatnam. Government-approved document legalization.",
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
   creator: siteConfig.creator,

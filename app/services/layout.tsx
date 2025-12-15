@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Our Services | Attestation, Apostille & Visa",
   description:
-    "Comprehensive document legalization services: MEA Attestation, Embassy Attestation, Apostille, Translation, and Visa assistance in India.",
+    "MEA Attestation, Embassy Attestation, Apostille, Translation & Visa services in India. Fast, reliable document legalization.",
   keywords: [
     "MEA Attestation Services",
     "Apostille Services India",

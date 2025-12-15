@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Find answers to common questions about Apostille, Embassy Attestation, Visa services, and document legalization procedures.",
+    "Common questions about Apostille, Embassy Attestation, Visa services & document legalization procedures in India.",
   openGraph: {
     title: "Frequently Asked Questions | Devansh International",
     description:
